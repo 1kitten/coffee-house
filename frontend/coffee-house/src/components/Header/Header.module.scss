@@ -1,0 +1,31 @@
+.header {
+  max-width: 1440px;
+  padding: 0 35px;
+  margin: 0 auto;
+  background-color: #020102;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  margin-left: 42px;
+}
+
+a {
+  color: #FFF8E8;
+  font-size: 20px;
+}
+a:hover {
+  color: #FFF8E8;
+  font-size: 20px;
+}
+
+img {
+  max-width: 72px;
+}
