@@ -10,15 +10,17 @@ const Logo = () => {
 
 export const Header = ({ }) => (
   <div className={styles.header}>
-    <Logo />
-      <nav>
-        <ul>
-          <li><a href='#!'>Home</a></li>
-          <li><a href='#!'>Menu</a></li>
-          <li><a href='#!'>Services</a></li>
-          <li><a href='#!'>Product</a></li>
-          <li><a href='#!'>Contact</a></li>
-        </ul>
-      </nav>
+    <a className={styles.logo}>
+      <img src={ILogo} alt='Coffe house' />
+    </a>
+    <nav className={styles.nav} title='Main navigation'>
+      <ul className={styles.nav_list}>
+        <li className={styles.nav_item}><a href='#!' className={styles.nav_link}>Home</a></li>
+        <li className={styles.nav_item}><a href='#!' className={styles.nav_link}>Menu</a></li>
+        <li className={styles.nav_item}><a href='#!' className={styles.nav_link}>Services</a></li>
+        <li className={styles.nav_item}><a href='#!' className={styles.nav_link}>Product</a></li>
+        <li className={styles.nav_item}><a href='#!' className={styles.nav_link}>Contact</a></li>
+      </ul>
+    </nav>
   </div>
 );

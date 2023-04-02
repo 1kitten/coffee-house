@@ -1,31 +1,6 @@
-.hero {
-
-}
-
-.text {
-   background: -webkit-linear-gradient(262.07deg, #F8E4BE 14.64%, #FFF3E0 40.26%, #FFF8E8 62%, #DFC39D 93.82%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  position: absolute;
-  max-width: 560px;
-  left: 10vw;
-  top: 223.76px;
-
-  font-family: 'Dancing Script';
-
-  font-weight: 700;
-  font-size: 112px;
-  text-transform: capitalize;
-
-  text-shadow:  67px 51px 50px rgba(0, 0, 0, 0.39), 30px 22px 37px rgba(0, 0, 0, 0.67);
-  }
-
-  .hero img {
-    position: absolute;
-    right: 0px;
-    max-width: 100%;
-    object-fit: cover;
-    z-index: -1;
-
+.app {
+  background-color: #221518;
+  background-image: url('../src/assets/png/beans.png');
+  background-repeat: repeat-y;
+  background-size: cover;
 }
