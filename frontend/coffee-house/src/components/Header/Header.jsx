@@ -10,7 +10,7 @@ const Logo = () => {
 
 export const Header = ({ }) => (
   <div className={styles.header}>
-      <Logo />
+    <Logo />
       <nav>
         <ul>
           <li><a href='#!'>Home</a></li>
