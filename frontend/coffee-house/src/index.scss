@@ -49,12 +49,38 @@ $font-famaly-tin: 'Tinos', serif;
 $font-famaly-danc: 'Dancing Script', cursive;
 
 
+.glov{
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  left: -224px;
+  top: -184px;
+  border-radius: 100%;
+  z-index: -2;
+
+  background: #745F58;
+  filter: blur(210px);
+}
+
+.glov2 {
+  position: absolute;
+  width: 1102px;
+  height: 1102px;
+  border-radius: 100%;
+  left: -550px;
+  top: -510px;
+  z-index: -2;
+
+  background: #3F2F2A;
+  filter: blur(210px);
+}
 
 body {
   margin: 0;
   font-family: $font-famaly-tin;
   font-weight: 400;
   font-size: 24px;
+  background-color: #221518;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
