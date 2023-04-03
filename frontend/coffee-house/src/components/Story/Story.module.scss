@@ -1,0 +1,73 @@
+.story {
+  width: 100%; 
+  margin-top: 120px;
+}
+
+.img {
+  grid-area: img;
+  max-width: 100%;
+  position: relative;
+}
+
+
+.wrapper2 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 100px);
+  column-gap: 35px;
+  
+  row-gap: 16px;
+  margin: 0 12vw;
+  padding-top: 50px;
+
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 0 12vw;
+  grid-template-rows: 70px 1fr;
+
+  background: rgba(173, 113, 74, 0.35);
+  backdrop-filter: blur(2px);
+  border-radius: 35px;
+  
+  
+  grid-template-areas:
+    "img img . . title"
+    "img img main main main";
+}
+
+
+.title {
+  position: relative;
+  justify-self: center;
+  grid-area: title;
+  bottom: 40px;
+  z-index: 1;
+  grid-row-start: 1;
+  background: -webkit-linear-gradient(262.07deg, #F8E4BE 14.64%, #FFF3E0 40.26%, #FFF8E8 62%, #DFC39D 93.82%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  font-family: 'Dancing Script';
+  font-weight: 700;
+  font-size: 54px;
+
+  text-shadow:  67px 51px 50px rgba(0, 0, 0, 0.39), 30px 22px 37px rgba(0, 0, 0, 0.67);
+}
+
+.description {
+  grid-area: main;
+  margin: 0 50px;
+  justify-content: center;
+  align-self: center;
+
+  font-family: var(--font-family-tin);
+
+  font-weight: 400;
+  font-size: var(--font-size);
+  line-height: 195.22%;
+
+  color: #DABB9E;
+}
