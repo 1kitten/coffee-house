@@ -1,12 +1,5 @@
-import { Container } from '../Container/Container';
 import ILogo from '../../assets/png/logo.png'
 import styles from './Header.module.scss';
-
-const Logo = () => {
-  return (
-    <img src={ILogo} />
-  )
-}
 
 export const Header = ({ }) => (
   <div className={styles.header}>

@@ -1,10 +1,9 @@
 import './App.scss';
 import { useState, useEffect } from 'react'
-import { Container } from './components/Container/Container';
 import { Header } from './components/Header/Header'
 import { Hero } from './components/Hero/Hero'
 import { Story } from './components/Story/Story'
-import Ihero from './assets/png/hero.png'
+import { Services } from './components/Services/Services';
 
 
 
@@ -31,6 +30,7 @@ function App() {
         <Header />
         <Hero />
         <Story />
+        <Services />
       </div>
     </>
   );

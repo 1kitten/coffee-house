@@ -11,9 +11,10 @@ export const Hero = ({ }) => (
       <div className={styles.container} >
         <h1 className={styles.title}>Coffe House</h1>
         <p className={styles.description}>Today's good mood is sponsored by coffee search for your coffee now</p>
-        <a href='#!' className={styles.btn}>Shop now</a>
-        <a href='#!' className={styles.btn}>Catalog</a>
+        <btn href='#!' className={styles.btn}>Shop now</btn>
+        <btn href='#!' className={styles.btn}>Catalog</btn>
       </div>
     </div>
   </section>
 );
+  
