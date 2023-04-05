@@ -11,18 +11,42 @@
   left: 0px;
   top: 0px;
   width: 100%;
-  
+
+  @media (max-width: 375px) {
+     padding: 10px 10px;
+  }
 }
 
 .logo {
   img {
-    max-width: 72px;
+    max-width: 100px;
+  }
+  @media (max-width: 1199px) {
+    img {
+      max-width: 72px;
+    }
+  }
+
+  @media (max-width: 820px) {
+    img {
+      max-width: 52px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    img {
+      max-width: 32px;
+    }
   }
 }
 
 .nav {
   display: flex;
   align-items: center;
+
+  @media (max-width: 820px) {
+    display: none;
+  }
 }
 
 .nav_list {
