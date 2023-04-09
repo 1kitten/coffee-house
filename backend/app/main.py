@@ -1,9 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-app = FastAPI()
+app = FastAPI(
+    title='coffee-shop'
+)
 
-origins = ["*"]
+origins = ["http://localhost:3000/"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -12,6 +14,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
 @app.get('/')
 def get_index():
-    return {"hello": "World"}
+    return {"hello": "world"}
