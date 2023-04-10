@@ -10,20 +10,20 @@ export const Services = ({ }) => (
     <h1 className={styles.title}>Services</h1>
     <div className={styles.wrapper}>
       <div className={styles.items}>
-        <div  className={styles.item}>
+        <div className={styles.item}>
           <img src={coffee} alt='type of coffee'/>
           <label className={styles.description}>Type of coffee</label>
         </div>
-        <div  className={styles.item}>
-          <img src={way} alt='type of coffee'/>
+        <div className={styles.item}>
+          <img src={way} alt='take a way'/>
           <label className={styles.description}>Take a way</label>
         </div>
-        <div  className={styles.item}>
-          <img src={beans} alt='type of coffee'/>
+        <div className={styles.item}>
+          <img src={beans} alt='beans variant'/>
           <label className={styles.description}>Beans variant</label>
         </div>
-        <div  className={styles.item}>
-          <img src={pastry} alt='type of coffee'/>
+        <div className={styles.item}>
+          <img src={pastry} alt='pastry'/>
           <label className={styles.description}>Pastry</label>
         </div>
       </div>
