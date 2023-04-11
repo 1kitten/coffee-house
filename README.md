@@ -1,4 +1,4 @@
-# Coffee shop
+# Coffee house
 
 <div>
   <img src="https://github.com/1kitten/coffee-house/blob/main/coffee-house-logo.png" width=170/>
