@@ -12,7 +12,7 @@ class Coffee(Base):
     description = Column(VARCHAR(255), nullable=True)
     price = Column(DECIMAL(precision=6, scale=2), nullable=False)
     category_id = Column(Integer, ForeignKey('category.id'))
-    icon = ...  # TODO: Make a valid Image field.
+    icon = Column(VARCHAR(150), nullable=False)
 
 
 class Category(Base):
@@ -21,6 +21,6 @@ class Category(Base):
 
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     title = Column(VARCHAR(35), nullable=False, index=True)
-    icon = ...  # TODO: Make a valid Image field.
+    icon = Column(VARCHAR(150), nullable=True)
 
     coffee = relationship('Coffee', backref='category')
