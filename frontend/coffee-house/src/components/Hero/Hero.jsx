@@ -1,11 +1,10 @@
 import styles from './Hero.module.scss';
 import hero_img from '../../assets/png/hero.png'
-import { forwardRef, useEffect } from 'react'
 
 export const Hero = ({ }) => {
   return(
   <section className={styles.hero}>
-    <img src={hero_img} className={styles.img}/>
+    <img src={hero_img} alt='hero img' className={styles.img}/>
     <div className={styles.glov}></div>
     <div className={styles.glov2}></div>
     <div className={styles.wrapper}>

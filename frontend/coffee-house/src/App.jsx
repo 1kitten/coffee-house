@@ -5,14 +5,13 @@ import { Hero } from './components/Hero/Hero'
 import { Story } from './components/Story/Story'
 import { Services } from './components/Services/Services';
 import { HeroCard } from './components/HeroCard/HeroCard';
-
-
+import { Footer } from './components/Footer/Footer';
 
 const BASE_URL = "http://127.0.0.1:8000/"
 
-
-
 function App() {
+  const vh = window.innerHeight / 100;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
 
   const [goodbye, setGoodbye] = useState()
   const [scroll, setScroll] = useState(window.pageYOffset)
@@ -34,15 +33,12 @@ function App() {
   return (
     <>
       <div onWheel={check} className="app">
-        <div >
-          <Header />
-          <Hero />
-          <Story />
-          <Services />
-          <HeroCard scroll={scroll}/>
-          <div style={{height: '300px', backgroundColor: '#fff', position: 'relative'}}>
-          </div>
-        </div>
+        <Header />
+        <Hero />
+        <Story />
+        <Services />
+        <HeroCard scroll={scroll}/>
+        <Footer />
       </div>
     </>
   );
