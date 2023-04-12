@@ -10,8 +10,4 @@
 ---
 ✔️ **Front skills**
 
-![skills](https://img.shields.io/badge/%F0%9F%92%8E-JavaScript-yellow)
-![skills](https://img.shields.io/badge/%E2%AD%90-SCSS-ff69b4)
-![skills](https://img.shields.io/badge/🌌-React-blue)
-![skills](https://img.shields.io/badge/%F0%9F%93%B1-Adaptive-blueviolet)
-![skills](https://img.shields.io/badge/🎨-Animation-brightgreen)
+![skills](https://skillicons.dev/icons?i=js,html,scss,react,figma)
