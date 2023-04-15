@@ -1,6 +1,6 @@
 import styles from './Story.module.scss';
 import story_img from '../../assets/png/story.png'
-import story_img2 from '../../assets/png/buy.png'
+import story_img2 from '../../assets/png/coffee.png'
 
 
 export const Story = ({ }) => (

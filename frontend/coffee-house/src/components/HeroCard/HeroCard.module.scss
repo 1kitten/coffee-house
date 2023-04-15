@@ -38,6 +38,19 @@
   
 }
 
+.loading {
+  @extend .img;
+  filter: blur(10px);
+  width: 110%;
+  left: 0px;
+}
+
+.loaded {
+  @extend .img;
+  filter: blur(0);
+  transition: filter 0.3s linear;
+}
+
 .label {
   grid-column: 2 / 3;
   grid-row: 1 / 2;

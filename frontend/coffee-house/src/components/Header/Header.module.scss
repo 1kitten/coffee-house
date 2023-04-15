@@ -40,6 +40,18 @@
   }
 }
 
+.loading {
+  @extend .logo;
+  filter: blur(10px);
+}
+
+.loaded {
+  @extend .logo;
+  filter: blur(0);
+  transition: filter 0.3s linear;
+}
+
+
 .nav {
   display: flex;
   align-items: center;
