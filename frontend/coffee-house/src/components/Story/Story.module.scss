@@ -34,6 +34,18 @@
   }
 }
 
+.loading {
+  @extend .img;
+  filter: blur(10px);
+}
+
+.loaded {
+  @extend .img;
+  filter: blur(0);
+  transition: filter 0.3s linear;
+}
+
+
 .img2 {
   grid-area: img2;
   display: none;
@@ -44,6 +56,18 @@
     bottom: 20px;
   }
 }
+
+.loading2 {
+  @extend .img2;
+  filter: blur(10px);
+}
+
+.loaded2 {
+  @extend .img2;
+  filter: blur(0);
+  transition: filter 0.3s linear;
+}
+
 
 .wrapper {
   display: grid;
