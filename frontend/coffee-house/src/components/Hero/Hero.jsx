@@ -1,10 +1,22 @@
 import styles from './Hero.module.scss';
 import hero_img from '../../assets/png/hero.png'
+import hero_low from '../../assets/png/hero_low.png'
+import { useEffect, useState } from 'react';
 
 export const Hero = ({ }) => {
+  const [imageSrc, setImageSrc] = useState(hero_low)
+
+  useEffect(() => {
+    const img = new Image()
+    img.src = hero_img
+    img.onload = () => {
+      setImageSrc(hero_img)
+    }
+  }, [hero_img])
+
   return(
   <section className={styles.hero}>
-    <img src={hero_img} alt='hero img' className={styles.img}/>
+    <img src={imageSrc} alt='hero img' className={imageSrc === hero_low ? styles.loading : styles.loaded}/>
     <div className={styles.glov}></div>
     <div className={styles.glov2}></div>
     <div className={styles.wrapper}>

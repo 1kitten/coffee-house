@@ -47,6 +47,18 @@
   }  
 }
 
+.loading {
+  @extend .img;
+  filter: blur(10px);
+}
+
+.loaded {
+  @extend .img;
+  filter: blur(0);
+  transition: filter 0.3s linear;
+}
+
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
