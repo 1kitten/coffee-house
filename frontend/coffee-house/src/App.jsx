@@ -6,6 +6,7 @@ import { Story } from './components/Story/Story'
 import { Services } from './components/Services/Services';
 import { HeroCard } from './components/HeroCard/HeroCard';
 import { Footer } from './components/Footer/Footer';
+import { Offer } from './components/Offer/Offer';
 
 const BASE_URL = "http://127.0.0.1:8000/"
 
@@ -37,6 +38,7 @@ function App() {
         <Hero />
         <Story />
         <Services />
+        <Offer />
         <HeroCard scroll={scroll}/>
         <Footer />
       </div>
