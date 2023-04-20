@@ -29,6 +29,7 @@ export const Footer = ({ }) => (
       <li><a className={styles.item} href='#'>Limitation of Liability</a></li>
     </ul>
     <ul className={styles.contact}>
+      <span>Contacts</span>
       <li><img src={location} /><a className={styles.item} href='#'> 12 jhon Avenue #35 - new York </a></li>
       <li><img src={email} /><a className={styles.item} href='#'> coffeehouse@coffee.com</a></li>
       <li><img src={phone} /><a className={styles.item} href='#'> +1-222-333-444</a></li>

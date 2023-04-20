@@ -24,7 +24,6 @@ export const Hero = ({ }) => {
         <h1 className={styles.title}>Coffee House</h1>
         <p className={styles.description}>Today's good mood is sponsored by coffee search for your coffee now</p>
         <a href='#!' className={styles.btn}>Shop now</a>
-        <a href='#!' className={styles.btn}>Catalog</a>
       </div>
     </div>
   </section>
