@@ -22,6 +22,7 @@ export const Reserve = ({ }) => {
     <div className={styles.wrapper}>
       <img src={reserve_img} className={styles.img} />
       <form className={styles.form}>
+        <p className={styles.description}>To reserve a table at our coffee shop, please fill out the form below. We'll get back to you as soon as possible to confirm your reservation.</p>
         <input className={styles.form_item} type='date'></input>
         <div className={styles.form_container}>
           <input type='time' className={styles.form_item_small} />

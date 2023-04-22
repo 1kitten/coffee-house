@@ -12,11 +12,24 @@
   border-radius: 35px;
   align-items: center;
   justify-items: center;
+
+  @media (max-width: 1500px) {
+    margin: 0 6vw;
+  }
+
+  @media (max-width: 1199px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 540px 500px;
+    margin-bottom: 200px;
+    align-items: start;
+  }
+}
+  
+.img {
+  max-height: 90%;
+  align-self: center;
 }
 
-.img {
-  max-height: 100%;
-}
 
 .title {
   position: relative;
@@ -25,7 +38,7 @@
   -webkit-text-fill-color: transparent;
   font-size: 54px;
   bottom: 45px;
-  width: 600px;
+
   margin: 0 auto;
   text-align: center;
   font-family: 'Dancing Script';
@@ -33,15 +46,11 @@
   text-shadow:  67px 51px 50px rgba(0, 0, 0, 0.39), 30px 22px 37px rgba(0, 0, 0, 0.67);
 
   @media (max-width: 820px) {
-    font-size: 42px;
-    line-height: 210%;
-    bottom: 10px;
+    bottom: 40px;
   }
 
   @media (max-width: 576px) {
-    font-size: 35px;
-    line-height: 210%;
-    bottom: 10px;
+    bottom: 50px;
   }
 }
 
@@ -53,15 +62,46 @@
   align-items: flex-start;
   padding: 0px;
   gap: 34px;
+
+  @media (max-width: 1199px) {
+    grid-column: 1;
+    grid-row: 1/2;
+  }
+
+  @media (max-width: 576px) {
+    width: 340px;
+  }
 }
 
 .form_container {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
   gap: 37px;
+
+  @media (max-width: 576px) {
+    gap: 20px;
+  }
 }
+
+.description {
+  grid-area: main;
+  font-size: 26px;
+  font-family: var(--font-family-tin);
+  line-height: 195.22%;
+  text-align: center;
+
+  color: #DABB9E;
+
+  @media (max-width: 1900px) {
+    font-size: 26px;
+    line-height: 40px;
+  }
+
+  @media (max-width: 576px) {
+    line-height: 32px;
+    font-size: 24px;
+  }
+}
+
 
 .form_item {
   flex-direction: row;
@@ -80,11 +120,18 @@
   border: 1px solid #D6D6D6;
   border-radius: 12px;
 
+  @media (max-width: 576px) {
+    width: 370px;
+  }
 }
 
 .form_item_small {
   @extend .form_item;
   width: 250px;
+
+  @media (max-width: 576px) {
+    width: 175px;
+  }
 }
 
 .btn {
@@ -101,6 +148,10 @@
   border: 2px solid #E0A872;
   border-radius: 49px;
 
+  @media (max-width: 576px) {
+    font-size: 24px;
+    width: 175px;
+  }
 }
 
 .glow{
@@ -110,7 +161,6 @@
   top: -229px;
 
   background:  #7D5647;
-  opacity: 0.8;
   filter: blur(130px);
 }
 .glow2{
