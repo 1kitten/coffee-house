@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-     <div onWheel={check} className="app">
+      <div onWheel={check} className="app">
         <Header />
         <Hero />
         <Story />
@@ -38,7 +38,7 @@ function App() {
         <HeroCard scroll={scroll}/>
         <Footer />
       </div>
-    </>
+   </>
   );
 }
 
