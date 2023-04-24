@@ -1,6 +1,7 @@
 import styles from './Reserve.module.scss';
 import reserve_img from '../../assets/png/reserve.png'
-import date_ico from '../../assets/date.svg'
+
+import { motion, AnimatePresence } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 
 export const Reserve = ({ }) => {
@@ -13,13 +14,35 @@ export const Reserve = ({ }) => {
     reset,
     handleSubmit,
   } = useForm({
-    mode: "onBlur"
+    mode: "onChange"
   })
 
   const onSubmit = (data) => {
     alert(JSON.stringify(data))
     reset()
   }
+
+  const item = {
+    hidden: { 
+      opacity: 0,
+      transition: {
+        type: "tween",
+        stiffness: 260,
+        damping: 10
+      } 
+    },
+    show: { 
+      opacity: 1,
+      transition: {
+        type: "tween",
+        stiffness: 260,
+        damping: 10
+      }
+    }
+  }
+
+  const currDate = new Date()
+  currDate.setDate(currDate.getDate() + 1)
 
   return(
   <section className={styles.reserve}>
@@ -35,15 +58,33 @@ export const Reserve = ({ }) => {
         <div>
           <input {...register('date', {
             required: 'required field',
+            min: currDate.toDateString(),
           })} className={styles.form_item} type='date'></input>
-          {errors?.date && <p className={styles.error}>{errors?.date?.message || 'error'}</p>}
+          <AnimatePresence>
+            {errors?.date && <motion.p 
+              variants={item}
+              initial='hidden'
+              animate='show'
+              exit='hidden'
+            className={styles.error}>{errors?.date?.message || 'choose another date'}</motion.p>}
+          </AnimatePresence>
         </div>
         <div className={styles.form_container}>
           <div>
-            <input {...register('time', {
+            <input {...register('time', 
+            {
               required: 'required field',
+              min: '09:00',
+              max: '23:00',
             })} className={styles.form_item_small} type='time'></input>
-            {errors?.time && <p className={styles.error}>{errors?.time?.message || 'error'}</p>}
+             <AnimatePresence>
+              {errors?.time && <motion.p 
+                variants={item}
+                initial='hidden'
+                animate='show'
+                exit='hidden'
+                className={styles.error}>{errors?.time?.message || 'choose another time'}</motion.p>}
+             </AnimatePresence>
           </div>
           <div>
             <select {...register('guest', {
@@ -59,7 +100,14 @@ export const Reserve = ({ }) => {
               <option value={3}>3</option>
               <option value={4}>4</option>
             </select>
-            {errors?.guest && <p className={styles.error}>{errors?.guest?.message || 'error'}</p>}
+            <AnimatePresence>
+              {errors?.guest && <motion.p 
+                variants={item}
+                initial='hidden'
+                animate='show'
+                exit='hidden'
+                className={styles.error}>{errors?.guest?.message || 'error'}</motion.p>}
+            </AnimatePresence>
           </div>
         </div>
         <div>
@@ -67,21 +115,42 @@ export const Reserve = ({ }) => {
               required: 'required field',
               pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i
             })} type='input' placeholder='your email' className={styles.form_item}/>
-          {errors?.email && <p className={styles.error}>{errors?.email?.message || 'wrong email'}</p>}
+            <AnimatePresence>
+             {errors?.email && <motion.p 
+              variants={item}
+              initial='hidden'
+              animate='show'
+              exit='hidden'
+              className={styles.error}>{errors?.email?.message || 'wrong email'}</motion.p>}
+            </AnimatePresence>
         </div>
         <div>
           <input  {...register('phone', {
               required: 'required field',
               pattern: /^([+]?[0-9\s-\(\)]{3,25})*$/i
             })} type='input' placeholder='your phone' className={styles.form_item} />
-          {errors?.phone && <p className={styles.error}>{errors?.phone?.message || 'wrong phone'}</p>}
+             <AnimatePresence>
+              {errors?.phone && <motion.p 
+                variants={item}
+                initial='hidden'
+                animate='show'
+                exit='hidden'
+                className={styles.error}>{errors?.phone?.message || 'wrong phone'}</motion.p>}
+            </AnimatePresence>
         </div>
         <div className={styles.form_container}>
           <div>
             <input  {...register('name', {
                 required: 'required field',
               })} type='input' placeholder='your name' className={styles.form_item_small} />
-            {errors?.name && <p className={styles.error}>{errors?.name?.message || 'error'}</p>}
+               <AnimatePresence>
+                {errors?.name && <motion.p 
+                  variants={item}
+                  initial='hidden'
+                  animate='show'
+                  exit='hidden'
+                  className={styles.error}>{errors?.name?.message || 'error'}</motion.p>}
+               </AnimatePresence>
           </div>
           <input disabled={!isValid} type='submit' value='Reserve' className={styles.btn}/>
         </div>
