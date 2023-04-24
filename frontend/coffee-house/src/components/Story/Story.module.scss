@@ -93,11 +93,11 @@
   
   @media (max-width: 820px) {
     grid-template-rows: auto 1fr;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-    ". title title . "
-    "img img img2 img2 "
-    "main main main main";
+    "title title"
+    "img img2"
+    "main main";
   }
 }
 
@@ -137,6 +137,7 @@
   @media (max-width: 375px) {
     bottom: 23px;
     line-height: normal;
+    width: 100%;
   }
 }
 
