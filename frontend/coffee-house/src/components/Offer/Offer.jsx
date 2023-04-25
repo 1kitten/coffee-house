@@ -1,8 +1,31 @@
 import styles from './Offer.module.scss';
 import offer_img from '../../assets/png/offer.png'
+import { motion } from 'framer-motion'
 
-export const Offer = ({ }) => (
-  <section className={styles.offer}>
+export const Offer = ({ }) => {
+  
+  const animation = {
+    hidden: {
+      opacity: 0,
+      x: 100
+      },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { 
+      type: 'spring',
+      duration: 2,
+      }
+    },
+  }
+
+  return(
+  <motion.section 
+    initial='hidden'
+    whileInView='visible'
+    viewport={{ amount: 0.6, once: true}}
+    variants={animation}
+    className={styles.offer}>
     <div className={styles.wrapper}>
       <h1 className={styles.title}>Offer</h1>
       <label className={styles.title2}>Up to 50% off</label>
@@ -11,5 +34,6 @@ export const Offer = ({ }) => (
       <a href='#!' className={styles.btn}>Shop now</a>
       <img src={offer_img} className={styles.img}></img>
     </div>
-  </section>
-);
+  </motion.section>
+  )
+};
