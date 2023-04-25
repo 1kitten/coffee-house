@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from src.reserve.schemas import ReserveSchema
+
 app = FastAPI(
     title='coffee-shop'
 )
@@ -16,6 +18,7 @@ app.add_middleware(
 )
 
 
-@app.get('/')
-def get_index():
-    return {"hello": "world"}
+@app.post('/api/v1/table_reservation/', response_model=ReserveSchema)
+def reserve_table(reserve_data: ReserveSchema) -> ReserveSchema:
+    """ Endpoint to reserve table. """
+    return reserve_data
