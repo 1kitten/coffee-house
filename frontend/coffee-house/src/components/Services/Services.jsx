@@ -50,25 +50,29 @@ export const Services = ({ }) => {
           viewport={{ amount: 1, once: true}}
           className={styles.items}>
         <motion.div variants={animationItems} custom={1} 
-        whileHover={{ scale: 1.1}}
+        whileHover={{ scale: 1.1}}   
+        whileTap={{scale: 0.9}}
         className={styles.item}>
           <img src={coffee} alt='type of coffee'/>
           <label className={styles.description}>Type of coffee</label>
         </motion.div>
         <motion.div variants={animationItems} custom={2} 
         whileHover={{ scale: 1.1}}
+        whileTap={{scale: 0.9}}
         className={styles.item}>
           <img src={way} alt='take a way'/>
           <label className={styles.description}>Take a way</label>
         </motion.div>
         <motion.div variants={animationItems} custom={3}
-        whileHover={{ scale: 1.1}} 
+        whileHover={{ scale: 1.1}}
+        whileTap={{scale: 0.9}} 
         className={styles.item}>
           <img src={beans} alt='beans variant'/>
           <label className={styles.description}>Beans variant</label>
         </motion.div>
         <motion.div variants={animationItems} custom={4}
           whileHover={{ scale: 1.1}}
+          whileTap={{scale: 0.9}}
           className={styles.item}>
           <img src={pastry} alt='pastry'/>
           <label className={styles.description}>Pastry</label>

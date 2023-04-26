@@ -45,7 +45,7 @@ export const Story = ({ }) => {
   <motion.section 
     initial='hidden'
     whileInView='visible'
-    viewport={{ amount: 0.6, once: true}}
+    viewport={{ amount: 0.4, once: true}}
     variants={animation}
     className={styles.story}>
     <motion.div 
