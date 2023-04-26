@@ -1,6 +1,6 @@
 import styles from './Reserve.module.scss';
 import reserve_img from '../../assets/png/reserve.png'
-
+import { forwardRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 
@@ -22,7 +22,7 @@ export const Reserve = ({ }) => {
     reset()
   }
 
-  const item = {
+  const errorsAnimate = {
     hidden: { 
       opacity: 0,
     },
@@ -31,11 +31,32 @@ export const Reserve = ({ }) => {
     }
   }
 
+  const animationItems = {
+    hidden:  custom => ({
+      y: 100 * custom,
+      opacity: 0,
+      }),
+    show: custom => ({
+      y: 0,
+      opacity: 1,
+      transition: {
+      delay: custom * 0.3,
+      type: 'spring',
+      duration: 1,
+      }
+    }),
+  }
+
   const currDate = new Date()
   currDate.setDate(currDate.getDate() + 1)
 
   return(
-  <section className={styles.reserve}>
+  <motion.section 
+    variants={errorsAnimate}
+    initial='hidden'
+    whileInView='show'
+    viewport={{ amount: 0.8, once: true}}
+    className={styles.reserve}>
     <div className={styles.glow_container}>
       <div className={styles.glow}></div>
       <div className={styles.glow2}></div>
@@ -46,15 +67,15 @@ export const Reserve = ({ }) => {
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <p className={styles.description}>To reserve a table at our coffee shop, please fill out the form below. We'll get back to you as soon as possible to confirm your reservation.</p>
         <div>
-          <FormItem register={register} errors={errors} item={item} name={'date'} type={'date'}
+          <MFormItem variants={animationItems} custom={1}register={register} errors={errors} item={errorsAnimate} name={'date'} type={'date'}
           className={styles.form_item} eMessage={'choose another date'} min={currDate.toDateString()}/>
         </div>
-        <div className={styles.form_container}>
+        <motion.div variants={animationItems} custom={2} className={styles.form_container}>
           <div>
-            <FormItem register={register} errors={errors} item={item} name={'time'} type={'time'}
+            <MFormItem register={register} errors={errors} item={errorsAnimate} name={'time'} type={'time'}
             className={styles.form_item_small} eMessage={'choose another time'} min={'09:00'} max={'23:00'}/>
           </div>
-          <div>
+          <motion.div >
             <select {...register('guest', {
               required: 'required field',
               min: {
@@ -70,36 +91,35 @@ export const Reserve = ({ }) => {
             </select>
             <AnimatePresence>
               {errors?.guest && <motion.p 
-                variants={item}
+                variants={errorsAnimate}
                 initial='hidden'
                 animate='show'
                 exit='hidden'
                 className={styles.error}>{errors?.guest?.message || 'error'}</motion.p>}
             </AnimatePresence>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         <div>
-          <FormItem register={register} errors={errors} item={item} name={'email'} type={'input'} placeholder={'your email'}
+          <MFormItem variants={animationItems} custom={3} register={register} errors={errors} item={errorsAnimate} name={'email'} type={'input'} placeholder={'your email'}
           className={styles.form_item} pattern={/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i} eMessage={'wrong email'} />
         </div>
         <div>
-          <FormItem register={register} errors={errors} item={item} name={'phone'} type={'input'} placeholder={'your phone'}
+          <MFormItem variants={animationItems} custom={4} register={register} errors={errors} item={errorsAnimate} name={'phone'} type={'input'} placeholder={'your phone'}
           className={styles.form_item} pattern={/^([+]?[0-9\s-\(\)]{3,25})*$/i} eMessage={'wrong phone'} />
         </div>
-        <div className={styles.form_container}>
-         <FormItem register={register} errors={errors} item={item} name={'name'} type={'input'} placeholder={'your name'} 
+        <motion.div variants={animationItems} custom={5} className={styles.form_container}>
+         <MFormItem register={register} errors={errors} item={errorsAnimate} name={'name'} type={'input'} placeholder={'your name'} 
           className={styles.form_item_small} />
           <input disabled={!isValid} type='submit' value='Reserve' className={styles.btn}/>
-        </div>
+        </motion.div>
       </form>
     </div>
-  </section>
+  </motion.section>
 )};
 
-const FormItem = ({ register, errors, item, type, name, placeholder, className, eMessage, pattern, min, max}) => {
-
+const FormItem = forwardRef(({ register, errors, item, type, name, placeholder, className, eMessage, pattern, min, max}, ref) => {
   return (
-    <div>
+    <div ref={ref}>
       <input  {...register(name, {
           required: 'required field',
           pattern: pattern,
@@ -117,4 +137,6 @@ const FormItem = ({ register, errors, item, type, name, placeholder, className, 
           </AnimatePresence>
     </div>
   )
-}
+})
+
+const MFormItem = motion(FormItem)
