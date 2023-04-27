@@ -42,13 +42,12 @@ export const Story = ({ }) => {
   }
 
   return(
-  <motion.section 
-    initial='hidden'
-    whileInView='visible'
-    viewport={{ amount: 0.4, once: true}}
-    variants={animation}
+  <section 
     className={styles.story}>
     <motion.div 
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ amount: 0.4, once: true}}
       variants={animation}
       className={styles.wrapper}>
       <h1 className={styles.title}>Our Story</h1>
@@ -58,5 +57,5 @@ export const Story = ({ }) => {
           Coffee House is an online coffee store that offers the widest selection of specialty coffees and teas from around the world. From medium-dark roast single origin to flavored espresso beans, they offer a variety of ethically sourced products to tantalize any customer’s palate. On top of all that, their baristas are highly trained professionals who know exactly how to make the perfect cup for each customer. Whether it's for home or business use, Coffee House has you covered - all conveniently available at the click of a button!
         </p>
   </motion.div>
-</motion.section>
+</section>
 )};

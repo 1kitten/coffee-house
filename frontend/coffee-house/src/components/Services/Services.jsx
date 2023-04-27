@@ -13,11 +13,7 @@ export const Services = ({ }) => {
       },
     visible: {
       opacity: 1,
-      transition: { 
-      type: 'spring',
-      duration: 3,
-      }
-    },
+    }
   }
 
   const animationItems = {
@@ -42,13 +38,10 @@ export const Services = ({ }) => {
     whileInView='visible'
     viewport={{ amount: 0.6, once: true}}
     className={styles.services}>
-    <motion.h1 variants={animation} className={styles.title}>Services</motion.h1>
+    <motion.h1 
+    variants={animation} className={styles.title}>Services</motion.h1>
     <div className={styles.wrapper}>
-      <motion.div 
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ amount: 1, once: true}}
-          className={styles.items}>
+      <div className={styles.items}>
         <motion.div variants={animationItems} custom={1} 
         whileHover={{ scale: 1.1}}   
         whileTap={{scale: 0.9}}
@@ -77,7 +70,7 @@ export const Services = ({ }) => {
           <img src={pastry} alt='pastry'/>
           <label className={styles.description}>Pastry</label>
         </motion.div>
-      </motion.div>
+      </div>
     </div>
   </motion.section>
   )
