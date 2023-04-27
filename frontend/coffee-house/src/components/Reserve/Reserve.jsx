@@ -116,7 +116,7 @@ export const Reserve = memo(({ }) => {
   </section>
 )});
 
-const FormItem = forwardRef(({ register, errors, item, type, name, placeholder, className, eMessage, pattern, min, max}, ref) => {
+const FormItem = memo(forwardRef(({ register, errors, item, type, name, placeholder, className, eMessage, pattern, min, max}, ref) => {
   return (
     <div ref={ref}>
       <input  {...register(name, {
@@ -136,6 +136,6 @@ const FormItem = forwardRef(({ register, errors, item, type, name, placeholder, 
           </AnimatePresence>
     </div>
   )
-})
+}))
 
 const MFormItem = motion(FormItem)
