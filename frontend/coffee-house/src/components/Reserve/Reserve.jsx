@@ -51,18 +51,17 @@ export const Reserve = ({ }) => {
   currDate.setDate(currDate.getDate() + 1)
 
   return(
-  <motion.section 
-    variants={errorsAnimate}
-    initial='hidden'
-    whileInView='show'
-    viewport={{ amount: 0.8, once: true}}
-    className={styles.reserve}>
+  <section className={styles.reserve}>
     <div className={styles.glow_container}>
       <div className={styles.glow}></div>
       <div className={styles.glow2}></div>
     </div>
     <h1 className={styles.title}>Reserve a Table</h1>
-    <div className={styles.wrapper}>
+    <motion.div 
+     initial='hidden'
+     whileInView='show'
+     viewport={{ amount: 0.4, once: true}}
+     className={styles.wrapper}>
       <img src={reserve_img} className={styles.img} />
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <p className={styles.description}>To reserve a table at our coffee shop, please fill out the form below. We'll get back to you as soon as possible to confirm your reservation.</p>
@@ -113,8 +112,8 @@ export const Reserve = ({ }) => {
           <input disabled={!isValid} type='submit' value='Reserve' className={styles.btn}/>
         </motion.div>
       </form>
-    </div>
-  </motion.section>
+    </motion.div>
+  </section>
 )};
 
 const FormItem = forwardRef(({ register, errors, item, type, name, placeholder, className, eMessage, pattern, min, max}, ref) => {
