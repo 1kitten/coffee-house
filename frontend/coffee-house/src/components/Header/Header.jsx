@@ -1,9 +1,9 @@
 import logo from '../../assets/png/logo.png'
 import logo_low from '../../assets/png/logo_low.png'
 import styles from './Header.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, memo } from 'react';
 
-export const Header = ({ }) => {
+export const Header = memo(({ }) => {
   const [imageSrc, setImageSrc] = useState(logo_low)
 
   useEffect(() => {
@@ -28,4 +28,4 @@ export const Header = ({ }) => {
       </ul>
     </nav>
   </div>
-)};
+)});

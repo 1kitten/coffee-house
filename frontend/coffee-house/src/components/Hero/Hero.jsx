@@ -1,9 +1,9 @@
 import styles from './Hero.module.scss';
 import hero_img from '../../assets/png/hero.png'
 import hero_low from '../../assets/png/hero_low.png'
-import { useEffect, useState } from 'react';
+import { useEffect, useState, memo } from 'react';
 
-export const Hero = ({ }) => {
+export const Hero = memo(({ }) => {
   const [imageSrc, setImageSrc] = useState(hero_low)
 
   useEffect(() => {
@@ -27,5 +27,5 @@ export const Hero = ({ }) => {
       </div>
     </div>
   </section>
-)};
+)});
   

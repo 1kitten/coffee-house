@@ -4,9 +4,9 @@ import footer_img from '../../assets/png/footer_img.png'
 import location from '../../assets/location.svg'
 import email from '../../assets/footer_email.svg'
 import phone from '../../assets/footer_phone.svg'
+import { memo } from 'react'
 
-
-export const Footer = ({ }) => (
+export const Footer = memo(({ }) => (
   <footer className={styles.footer}>
     <img src={footer_bg} className={styles.bg} />
     <img src={footer_img} alt='footer img' className={styles.img} />
@@ -39,4 +39,4 @@ export const Footer = ({ }) => (
       <label>Copyright 2023 Eliza Coffee . All rights reserved.</label>
     </div >
   </footer>
-);
+))

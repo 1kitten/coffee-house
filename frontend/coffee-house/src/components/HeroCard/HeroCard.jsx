@@ -2,9 +2,9 @@ import styles from './HeroCard.module.scss';
 import coffee from '../../assets/png/coffee.png'
 import coffee_low from '../../assets/png/coffee_low.png'
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react';
+import { useEffect, useState, memo } from 'react';
 
-export const HeroCard = ({ scroll }) => {
+export const HeroCard = memo(({ scroll }) => {
   const [imageSrc, setImageSrc] = useState(coffee_low)
 
   useEffect(() => {
@@ -30,4 +30,4 @@ export const HeroCard = ({ scroll }) => {
      
     </motion.section>
   )  
-};
+});

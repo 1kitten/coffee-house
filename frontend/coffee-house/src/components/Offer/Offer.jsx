@@ -1,8 +1,10 @@
 import styles from './Offer.module.scss';
 import offer_img from '../../assets/png/offer.png'
+import { memo } from 'react'
 import { motion } from 'framer-motion'
 
-export const Offer = ({ }) => {
+
+export const Offer = memo(({ }) => {
   
   const animation = {
     hidden: {
@@ -36,4 +38,4 @@ export const Offer = ({ }) => {
     </motion.div>
   </section>
   )
-};
+});
