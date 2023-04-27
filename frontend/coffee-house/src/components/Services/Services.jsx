@@ -4,8 +4,9 @@ import way from '../../assets/take_a_way.svg'
 import beans from '../../assets/beans_variant.svg'
 import pastry from '../../assets/pastry.svg'
 import { motion } from 'framer-motion'
+import { memo } from 'react'
 
-export const Services = ({ }) => {
+export const Services = memo(({ }) => {
 
   const animation = {
     hidden: {
@@ -74,4 +75,4 @@ export const Services = ({ }) => {
     </div>
   </motion.section>
   )
-};
+});

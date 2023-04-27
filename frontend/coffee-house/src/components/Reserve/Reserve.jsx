@@ -1,10 +1,10 @@
 import styles from './Reserve.module.scss';
 import reserve_img from '../../assets/png/reserve.png'
-import { forwardRef } from 'react'
+import { forwardRef, memo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 
-export const Reserve = ({ }) => {
+export const Reserve = memo(({ }) => {
   const {
     register,
     formState: {
@@ -114,7 +114,7 @@ export const Reserve = ({ }) => {
       </form>
     </motion.div>
   </section>
-)};
+)});
 
 const FormItem = forwardRef(({ register, errors, item, type, name, placeholder, className, eMessage, pattern, min, max}, ref) => {
   return (

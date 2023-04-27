@@ -4,9 +4,10 @@ import story_img_low from '../../assets/png/story_low.png'
 import story_img2 from '../../assets/png/coffee.png'
 import story_img2_low from '../../assets/png/coffee_low.png'
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react';
+import { useEffect, useState, memo } from 'react';
 
-export const Story = ({ }) => { 
+
+export const Story = memo(({ }) => { 
   const [imageSrc, setImageSrc] = useState(story_img_low)
   const [imageSrc2, setImageSrc2] = useState(story_img2_low)
 
@@ -58,4 +59,4 @@ export const Story = ({ }) => {
         </p>
   </motion.div>
 </section>
-)};
+)});

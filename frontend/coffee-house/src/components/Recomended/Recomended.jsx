@@ -4,9 +4,10 @@ import arabica from '../../assets/png/arabica.png'
 import house_blend from '../../assets/png/house_blend.png'
 import robusta from '../../assets/png/robusta.png'
 import { motion } from 'framer-motion'
-import { forwardRef }  from 'react'
+import { forwardRef, memo }  from 'react'
 
-export const Recomended = ({ }) => {
+
+export const Recomended = memo(({ }) => {
   
   const animation = {
     hidden: {
@@ -56,7 +57,7 @@ export const Recomended = ({ }) => {
         img={robusta} name={'Robusta'}/>
     </motion.div>
   </motion.section>
-)};
+)});
 
 const Item = forwardRef(({ img, name }, ref) => (
   <div ref={ref} className={styles.item}>
