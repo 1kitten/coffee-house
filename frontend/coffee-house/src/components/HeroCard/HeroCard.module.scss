@@ -18,10 +18,18 @@
     width: 500px;
     height: 300px;
   }
+
   @media (max-width: 1199px) {
     display: none;
   }
-  
+
+  @media (max-height: 850px) {
+    height: 200px;
+  }
+
+  @media (max-height: 700px) {
+    display: none;
+  }
 }
 
 .img {
@@ -35,6 +43,13 @@
   max-width: none;
   bottom: -53px;
   left: -85px;
+
+  @media (max-height: 850px) {
+    width: 400px;
+    height: 400px;
+    bottom: -38px;
+    left: -38px;
+  }
   
 }
 
