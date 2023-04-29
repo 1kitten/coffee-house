@@ -11,3 +11,7 @@
 ✔️ **Front skills**
 
 ![skills](https://skillicons.dev/icons?i=js,html,scss,react,figma)
+
+✔️ **Back skills**
+
+![skills](https://skillicons.dev/icons?i=py,fastapi,postgres)
