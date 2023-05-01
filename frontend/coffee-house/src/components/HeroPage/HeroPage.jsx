@@ -1,5 +1,5 @@
 import styles from './HeroPage.module.scss';
-import { useState } from 'react'
+import { useState, memo } from 'react'
 
 import { Header } from '../Header/Header'
 import { Hero } from '../Hero/Hero'
