@@ -1,0 +1,38 @@
+.customLink {
+  width: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #FFF8E8;
+  font-family: var(--font-family-tin);
+  font-size: 24px;
+
+  @media (max-width: 1199px) {
+      width: 65px;
+  }
+
+}
+
+.active {
+  @extend .customLink;
+  height: 100px;
+
+  animation-duration: 1s;
+  animation-name: active;
+
+  background: linear-gradient(93.99deg, rgba(223, 195, 157, 0.4) -9.94%, rgba(248, 228, 190, 0.4) 19.83%, rgba(223, 195, 157, 0.4) 50.71%, rgba(248, 228, 190, 0.4) 81.26%, rgba(248, 228, 190, 0.4) 111.66%);
+  border-radius: 0px 0px 30px 30px;
+ 
+}
+
+@keyframes active {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}

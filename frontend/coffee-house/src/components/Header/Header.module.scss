@@ -4,7 +4,7 @@
   justify-content: space-between;
   z-index: 1;
 
-  padding: 10px 34px;
+  padding: 0px 34px;
   margin: 0 auto;
   
   position: absolute;
@@ -55,16 +55,13 @@
 .nav {
   display: flex;
   align-items: center;
-
+  gap: 40px;
+  @media (max-width: 1199px) {
+    gap: 30px;
+  }
   @media (max-width: 820px) {
     display: none;
   }
-}
-
-.nav_list {
-  display: flex;
-  align-items: center;
-  gap: 60px;
 }
 
 .nav_link {
