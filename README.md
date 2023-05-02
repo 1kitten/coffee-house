@@ -15,3 +15,8 @@
 ✔️ **Back skills**
 
 ![skills](https://skillicons.dev/icons?i=py,fastapi,postgres)
+
+
+### 💅 Design
+
+<b>Made by [Elinaui9](https://www.figma.com/community/file/1201934180337804907/Coffee-Shop-Web-Design)</b>
