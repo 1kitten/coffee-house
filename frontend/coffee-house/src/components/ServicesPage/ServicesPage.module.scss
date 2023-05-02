@@ -1,0 +1,7 @@
+@import '../../App.scss';
+
+.servicesPage {
+  @extend %app;
+  height: 100vh;
+}
+
