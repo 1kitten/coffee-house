@@ -24,7 +24,7 @@ export const Header = memo(({ }) => {
     <nav className={styles.nav} title='Main navigation'>
     <CustomLink to='/' >Home</CustomLink>
     <CustomLink to='/menu' >Menu</CustomLink>
-    <CustomLink to='/story' >Services</CustomLink>
+    <CustomLink to='/services' >Services</CustomLink>
     <CustomLink to='/asd' >Product</CustomLink>
     </nav>
   </header>
