@@ -18,11 +18,11 @@ export const ServicesPage = ({ }) => {
   return(
   <section className={styles.servicesPage}>
     <div onClick={checkClick} className={styles.wrapper}>
-      <Carousel height={200} xRadius={radius}>
-        <label key={1} onClick={checkClick} className={styles.title} data-action="Hleb">Hleb</label>
-        <label key={2} onClick={checkClick} className={styles.title} data-action="Stakani">Stakani</label>
-        <label key={3} onClick={checkClick} className={styles.title} data-action="Popit">Popit'</label>
-        <label key={4} onClick={checkClick} className={styles.title} data-action="Zerna">Zerna</label>
+      <Carousel width={300} height={200} xRadius={radius}>
+        <label key={1} onClick={checkClick} className={styles.title} data-action="Coffee">Coffee</label>
+        <label key={2} onClick={checkClick} className={styles.title} data-action="Way">Take a way</label>
+        <label key={3} onClick={checkClick} className={styles.title} data-action="Beans">Beans</label>
+        <label key={4} onClick={checkClick} className={styles.title} data-action="Pastry">Pastry</label>
       </Carousel>
     </div>
   </section>
