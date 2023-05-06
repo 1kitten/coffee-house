@@ -14,7 +14,7 @@ export const Reserve = memo(({ }) => {
     reset,
     handleSubmit,
   } = useForm({
-    mode: "onChange"
+    mode: "onBlur"
   })
 
   const onSubmit = (data) => {
