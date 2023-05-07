@@ -108,3 +108,18 @@
 .img {
   padding: 0 50px;
 }
+
+.more {
+  position: absolute;
+  font-family: var(--font-family-tin);
+  font-size: 24px;
+  color: #FFFFFF;
+  font-weight: 400;
+
+  right: 50px;
+  bottom: 50px;
+
+  @media (max-width: 820px) {
+    font-size: 18px;
+  }
+}

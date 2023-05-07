@@ -37,5 +37,6 @@ const BlogItem = ({ children, title, img }) => (
     <h2 className={styles.item_title}>{title}</h2>
     <p className={styles.description}>{children}</p>
     <img className={styles.img} src={img} />
+    <label className={styles.more}>More...</label>
   </div>
 )
