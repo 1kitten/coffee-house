@@ -7,13 +7,13 @@ export const ServicesPage = ({ }) => {
   let radius = window.innerWidth
   const [category, setCategory] = useState('coffee')
 
-    if (window.innerWidth > 1000) {
-      radius = 500
-    } else if (1000 > window.innerWidth  && window.innerWidth > 600) {
-      radius = 300
-    } else {
-      radius = 100
-    }
+  if (window.innerWidth > 1000) {
+    radius = 500
+  } else if (1000 > window.innerWidth  && window.innerWidth > 600) {
+    radius = 300
+  } else {
+    radius = 100
+  }
 
   const checkClick = (e) => {
     if (e.target.dataset.action) {
