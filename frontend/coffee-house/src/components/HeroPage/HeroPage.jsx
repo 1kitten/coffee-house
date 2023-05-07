@@ -1,15 +1,15 @@
 import styles from './HeroPage.module.scss';
-import { useState, memo } from 'react'
+import { useState } from 'react'
 
-import { Header } from '../Header/Header'
 import { Hero } from '../Hero/Hero'
 import { Story } from '../Story/Story'
 import { Services } from '../Services/Services';
-import { HeroCard } from '../HeroCard/HeroCard';
-import { Footer } from '../Footer/Footer';
+
 import { Offer } from '../Offer/Offer';
 import { Reserve } from '../Reserve/Reserve';
 import { Recomended } from '../Recomended/Recomended';
+import { Blog } from '../Blog/Blog';
+import { HeroCard } from '../HeroCard/HeroCard';
 
 export const HeroPage = ({ }) => {
 
@@ -27,6 +27,7 @@ export const HeroPage = ({ }) => {
     <Offer />
     <Reserve />
     <Recomended />
+    <Blog></Blog>
     <HeroCard scroll={scroll}/>
   </div>
   )

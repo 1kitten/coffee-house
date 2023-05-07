@@ -5,6 +5,7 @@ import pastry from '../../assets/png/pastry.png'
 export const Item = ({ type }) => {
   let img
   let title
+  
   switch(type) {
     case 'pastry':  
       img = pastry
