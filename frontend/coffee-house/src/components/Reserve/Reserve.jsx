@@ -1,5 +1,5 @@
 import styles from './Reserve.module.scss';
-import reserve_img from '../../assets/png/reserve.png'
+import reserve_img from '../../assets/png/reserve.webp'
 import { forwardRef, memo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useForm } from 'react-hook-form'
@@ -52,6 +52,7 @@ export const Reserve = memo(({ }) => {
 
   return(
   <section className={styles.reserve}>
+    {console.log('parent')}
     <div className={styles.glow_container}>
       <div className={styles.glow}></div>
       <div className={styles.glow2}></div>
@@ -63,10 +64,11 @@ export const Reserve = memo(({ }) => {
      viewport={{ amount: 0.4, once: true}}
      className={styles.wrapper}>
       <img src={reserve_img} className={styles.img} />
-      <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+      <form className={styles.form} onSubmit={ handleSubmit(onSubmit)}>
+        {console.log('bebra')}
         <p className={styles.description}>To reserve a table at our coffee shop, please fill out the form below. We'll get back to you as soon as possible to confirm your reservation.</p>
         <div>
-          <MFormItem variants={animationItems} custom={1}register={register} errors={errors} item={errorsAnimate} name={'date'} type={'date'}
+          <MFormItem variants={animationItems} custom={1} register={register} errors={errors} item={errorsAnimate} name={'date'} type={'date'}
           className={styles.form_item} eMessage={'choose another date'} min={currDate.toDateString()}/>
         </div>
         <motion.div variants={animationItems} custom={2} className={styles.form_container}>
@@ -116,7 +118,7 @@ export const Reserve = memo(({ }) => {
   </section>
 )});
 
-const FormItem = memo(forwardRef(({ register, errors, item, type, name, placeholder, className, eMessage, pattern, min, max}, ref) => {
+const FormItem = forwardRef(({ register, errors, item, type, name, placeholder, className, eMessage, pattern, min, max}, ref) => {
   return (
     <div ref={ref}>
       <input  {...register(name, {
@@ -136,6 +138,6 @@ const FormItem = memo(forwardRef(({ register, errors, item, type, name, placehol
           </AnimatePresence>
     </div>
   )
-}))
+})
 
 const MFormItem = motion(FormItem)

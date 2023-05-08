@@ -1,7 +1,7 @@
 import styles from './Story.module.scss';
 import story_img from '../../assets/png/story.png'
 import story_img_low from '../../assets/png/story_low.png'
-import story_img2 from '../../assets/png/coffee.png'
+import story_img2 from '../../assets/png/coffee.webp'
 import story_img2_low from '../../assets/png/coffee_low.png'
 import { motion } from 'framer-motion'
 import { useEffect, useState, memo } from 'react';
