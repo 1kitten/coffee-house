@@ -1,5 +1,5 @@
 import styles from './Hero.module.scss';
-import hero_img from '../../assets/png/hero.png'
+import hero_img from '../../assets/png/hero.webp'
 import hero_low from '../../assets/png/hero_low.png'
 import { useEffect, useState, memo } from 'react';
 

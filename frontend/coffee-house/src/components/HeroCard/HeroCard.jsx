@@ -1,5 +1,5 @@
 import styles from './HeroCard.module.scss';
-import coffee from '../../assets/png/coffee.png'
+import coffee from '../../assets/png/coffee.webp'
 import coffee_low from '../../assets/png/coffee_low.png'
 import { motion } from 'framer-motion'
 import { useEffect, useState, memo } from 'react';

@@ -27,7 +27,7 @@ export const HeroPage = ({ }) => {
     <Offer />
     <Reserve />
     <Recomended />
-    <Blog></Blog>
+    <Blog />
     <HeroCard scroll={scroll}/>
   </div>
   )

@@ -1,5 +1,5 @@
 import styles from './Footer.module.scss';
-import footer_bg from '../../assets/png/footer.png'
+import footer_bg from '../../assets/png/footer.webp'
 import footer_img from '../../assets/png/footer_img.png'
 import location from '../../assets/location.svg'
 import email from '../../assets/footer_email.svg'
