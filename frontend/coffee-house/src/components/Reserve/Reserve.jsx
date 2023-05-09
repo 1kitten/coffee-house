@@ -52,7 +52,6 @@ export const Reserve = memo(({ }) => {
 
   return(
   <section className={styles.reserve}>
-    {console.log('parent')}
     <div className={styles.glow_container}>
       <div className={styles.glow}></div>
       <div className={styles.glow2}></div>
@@ -65,7 +64,6 @@ export const Reserve = memo(({ }) => {
      className={styles.wrapper}>
       <img src={reserve_img} className={styles.img} />
       <form className={styles.form} onSubmit={ handleSubmit(onSubmit)}>
-        {console.log('bebra')}
         <p className={styles.description}>To reserve a table at our coffee shop, please fill out the form below. We'll get back to you as soon as possible to confirm your reservation.</p>
         <div>
           <MFormItem variants={animationItems} custom={1} register={register} errors={errors} item={errorsAnimate} name={'date'} type={'date'}
