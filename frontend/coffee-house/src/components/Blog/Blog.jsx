@@ -16,6 +16,7 @@ export const Blog = memo(({ }) => {
   const [width, setWidth] = useState(0)
   const [modalActive, setModalActive] = useState(false)
   const [x, setX] = useState(0)
+  const [data, setData] = useState({})
   const carousel = useRef()
 
   useEffect(() => {
@@ -30,6 +31,32 @@ export const Blog = memo(({ }) => {
     if (e.clientX > x - 10 || e.clientX > x + 10) {
       let target = e.target.closest("#blog")
       if (target) {
+        let newData
+        switch (target.dataset.name) {
+          case '1':
+            setData(newData ={
+              'title': 'How to make a great coffe',
+              'content': text1,
+              'img': blog_1
+            })
+            break;
+          case '2':
+            setData(newData ={
+              'title': 'Different types of coffee explained',
+              'content': text2,
+              'img': blog_2
+            })
+          break;
+          case '3':
+            setData(newData ={
+              'title': 'Why does caffeine make us stay awake',
+              'content': text3,
+              'img': blog_3
+            })
+          break;
+          default:
+            break;
+        }
         setModalActive(true)
       } else {
         setModalActive(false)
@@ -38,20 +65,22 @@ export const Blog = memo(({ }) => {
   }
 
   return(
-  <section className={styles.blog}>
-    <h1 className={styles.title}>Our Blog</h1>
-    <motion.div onMouseDown={handleDown} onClick={handleClick} ref={carousel} className={styles.wrapper} whileTap={'grabbing'}>
-      <motion.div  drag='x' dragConstraints={{right: 0, left: -width}} className={styles.carousel}>
-        <BlogItem id={'blog'} name={'1'} title='How to make a great coffe' img={blog_1} > {text1} </BlogItem>
-        <BlogItem id={'blog'} name={'2'} title='Different types of coffee explained' img={blog_2} > {text2} </BlogItem>
-        <BlogItem id={'blog'} name={'3'} title='Why does caffeine make us stay awake' img={blog_3} > {text3}  </BlogItem>
+  <section className={styles.section}>
+    <div className={styles.blog}> 
+      <h1 className={styles.title}>Our Blog</h1>
+      <motion.div onMouseDown={handleDown} onClick={handleClick} ref={carousel} className={styles.wrapper} whileTap={'grabbing'}>
+        <motion.div  drag='x' dragConstraints={{right: 0, left: -width}} className={styles.carousel}>
+          <BlogItem id={'blog'} name={'1'} title='How to make a great coffe' img={blog_1} > {text1} </BlogItem>
+          <BlogItem id={'blog'} name={'2'} title='Different types of coffee explained' img={blog_2} > {text2} </BlogItem>
+          <BlogItem id={'blog'} name={'3'} title='Why does caffeine make us stay awake' img={blog_3} > {text3}  </BlogItem>
+        </motion.div>
       </motion.div>
-    </motion.div>
-    <Modal active={modalActive} setActive={setModalActive} />
+      <Modal active={modalActive} setActive={setModalActive} data={data} />
+    </div>
   </section>
 )})
 
-const BlogItem = ({ children, title, img, id, name }) => (
+const BlogItem =({ children, title, img, id, name }) => (
   <div id={id} data-name={name} className={styles.item}>
     <h2 className={styles.item_title}>{title}</h2>
     <p className={styles.description}>{children}</p>

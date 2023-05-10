@@ -197,6 +197,10 @@
   border: 2px solid #E0A872;
   border-radius: 49px;
 
+  &:hover {
+    background: rgba(247, 225, 188, 0.3);
+  }
+
   &:disabled {
     color: #a59981;
     background: rgba(217, 151, 76, 0.1);
