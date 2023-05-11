@@ -1,7 +1,7 @@
 import styles from './Blog.module.scss';
-import blog_1 from '../../assets/png/blog_1.png'
-import blog_2 from '../../assets/png/blog_2.png'
-import blog_3 from '../../assets/png/blog_3.png'
+import blog_1 from '../../assets/blog_1.svg'
+import blog_2 from '../../assets/blog_2.svg'
+import blog_3 from '../../assets/blog_3.svg'
 
 import { Modal } from '../Modal/Modal';
 import { memo, useEffect, useState, useRef } from 'react';
