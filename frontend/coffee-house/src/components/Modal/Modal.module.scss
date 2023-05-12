@@ -1,7 +1,7 @@
 @import '../Blog/Blog.module.scss';
 
 .modal {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
@@ -27,10 +27,12 @@
   background: #997D6C;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 50px;
-  overflow: scroll;
+
+  @media (max-width: 820px) {
+    overflow: scroll;
+    gap: 30px;
+  }
 
   @media (max-height: 820px) {
     height: 70%;
@@ -47,25 +49,43 @@
 }
 
 
-.title {
+.item_title {
   @extend .item_title;
-  padding: 0 10px;
+  padding: 0px;
+  align-self: center;
 }
 
 .description{
- @extend .description;
- height: auto;
- overflow: visible;
+@extend .description;
+height: auto;
+overflow: visible;
+
+@media (max-width: 820px) {
+  font-size: 20px;
+}
+  
+@media (max-width: 576px) {
+  padding: 0 20px;
+}
+
 
  @media (max-width: 375px) {
   padding: 0 10px;
-  }
+ }
 } 
 
 .img {
   @extend .img;
-  width: 50%;
+  width: 30%;
   align-self: center;
+
+  @media (max-width: 1920px) {
+    width: 50%;
+  }
+
+  @media (max-width: 820px) {
+    width: 100%;
+  }
 
   @media (max-width: 375px) {
     width: auto;
