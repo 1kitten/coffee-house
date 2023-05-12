@@ -23,29 +23,53 @@
 .content {
   padding: 20px;
   border-radius: 35px;
-  width: 70%;
+  width: 80%;
   background: #997D6C;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 50px;
-  
+  overflow: scroll;
+
+  @media (max-height: 820px) {
+    height: 70%;
+    gap: 10px;
+  }
+
+  @media (max-width: 375px) {
+    height: 70%;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
+
 
 .title {
   @extend .item_title;
+  padding: 0 10px;
 }
 
 .description{
  @extend .description;
  height: auto;
  overflow: visible;
+
+ @media (max-width: 375px) {
+  padding: 0 10px;
+  }
 } 
 
 .img {
   @extend .img;
-  width: 70%;
+  width: 50%;
   align-self: center;
+
+  @media (max-width: 375px) {
+    width: auto;
+    padding: 0px;
+  }
 
 }
