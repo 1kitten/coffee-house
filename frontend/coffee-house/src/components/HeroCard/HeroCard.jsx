@@ -1,6 +1,7 @@
 import styles from './HeroCard.module.scss';
 import coffee from '../../assets/png/coffee.webp'
 import coffee_low from '../../assets/png/coffee_low.png'
+import { CustomBtn } from '../CustomBtn/CustomBtn'
 import { motion } from 'framer-motion'
 import { useEffect, useState, memo } from 'react';
 
@@ -26,8 +27,9 @@ export const HeroCard = memo(({ scroll }) => {
     >
     <img className={imageSrc === coffee_low ? styles.loading : styles.loaded} src={imageSrc} alt='coffee'/>
     <label className={styles.label}>But first coffee</label>
-    <a className={styles.btn}>Shop now</a>
-     
+    <div className={styles.btn}>
+      <CustomBtn to='/services' type='medium' >Shop now</CustomBtn>
+    </div>
     </motion.section>
   )  
 });

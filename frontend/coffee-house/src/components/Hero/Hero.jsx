@@ -1,6 +1,7 @@
 import styles from './Hero.module.scss';
 import hero_img from '../../assets/png/hero.webp'
 import hero_low from '../../assets/png/hero_low.png'
+import { CustomBtn } from '../CustomBtn/CustomBtn'
 import { useEffect, useState, memo } from 'react';
 
 export const Hero = memo(({ }) => {
@@ -23,7 +24,8 @@ export const Hero = memo(({ }) => {
       <div className={styles.container} >
         <h1 className={styles.title}>Coffee House</h1>
         <p className={styles.description}>Today's good mood is sponsored by coffee search for your coffee now</p>
-        <a href='#!' className={styles.btn}>Shop now</a>
+        <CustomBtn to='/services' type='big' >Shop now</CustomBtn>
+        
       </div>
     </div>
   </section>

@@ -5,6 +5,7 @@ import beans from '../../assets/beans_variant.svg'
 import pastry from '../../assets/pastry.svg'
 import { motion } from 'framer-motion'
 import { memo } from 'react'
+import { Link } from 'react-router-dom';
 
 export const Services = memo(({ }) => {
 
@@ -43,34 +44,42 @@ export const Services = memo(({ }) => {
     variants={animation} className={styles.title}>Services</motion.h1>
     <div className={styles.wrapper}>
       <div className={styles.items}>
-        <motion.div variants={animationItems} custom={1} 
-        whileHover={{ scale: 1.1}}   
-        whileTap={{scale: 0.9}}
-        className={styles.item}>
-          <img src={coffee} alt='type of coffee'/>
-          <label className={styles.description}>Type of coffee</label>
-        </motion.div>
-        <motion.div variants={animationItems} custom={2} 
-        whileHover={{ scale: 1.1}}
-        whileTap={{scale: 0.9}}
-        className={styles.item}>
-          <img src={way} alt='take a way'/>
-          <label className={styles.description}>Take a way</label>
-        </motion.div>
-        <motion.div variants={animationItems} custom={3}
-        whileHover={{ scale: 1.1}}
-        whileTap={{scale: 0.9}} 
-        className={styles.item}>
-          <img src={beans} alt='beans variant'/>
-          <label className={styles.description}>Beans variant</label>
-        </motion.div>
-        <motion.div variants={animationItems} custom={4}
+        <Link to={'/services'} state={{ category: 'coffee' }}>
+          <motion.div variants={animationItems} custom={1} 
+          whileHover={{ scale: 1.1}}   
+          whileTap={{scale: 0.9}}
+          className={styles.item}>
+            <img src={coffee} alt='type of coffee'/>
+            <label className={styles.description}>Type of coffee</label>
+          </motion.div>
+        </Link>
+        <Link to={'/services'} state={{ category: 'way' }}>
+          <motion.div variants={animationItems} custom={2} 
           whileHover={{ scale: 1.1}}
           whileTap={{scale: 0.9}}
           className={styles.item}>
-          <img src={pastry} alt='pastry'/>
-          <label className={styles.description}>Pastry</label>
-        </motion.div>
+            <img src={way} alt='take a way'/>
+            <label className={styles.description}>Take a way</label>
+          </motion.div>
+        </Link>
+        <Link to={'/services'} state={{ category: 'beans' }}>
+          <motion.div variants={animationItems} custom={3}
+          whileHover={{ scale: 1.1}}
+          whileTap={{scale: 0.9}} 
+          className={styles.item}>
+            <img src={beans} alt='beans variant'/>
+            <label className={styles.description}>Beans variant</label>
+          </motion.div>
+        </Link>
+        <Link to={'/services'} state={{ category: 'pastry' }}>
+          <motion.div variants={animationItems} custom={4}
+            whileHover={{ scale: 1.1}}
+            whileTap={{scale: 0.9}}
+            className={styles.item}>
+            <img src={pastry} alt='pastry'/>
+            <label className={styles.description}>Pastry</label>
+          </motion.div>
+        </Link>
       </div>
     </div>
   </motion.section>
