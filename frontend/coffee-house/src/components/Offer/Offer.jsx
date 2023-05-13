@@ -2,6 +2,7 @@ import styles from './Offer.module.scss';
 import offer_img from '../../assets/png/offer.png'
 import { memo } from 'react'
 import { motion } from 'framer-motion'
+import { CustomBtn } from '../CustomBtn/CustomBtn';
 
 
 export const Offer = memo(({ }) => {
@@ -33,7 +34,9 @@ export const Offer = memo(({ }) => {
       <label className={styles.title2}>Up to 50% off</label>
       <p className={styles.description}>At our cafe, we take pride in providing our customers with the best coffee around. Our carefully-selected coffees come from some of the most renowned coffee growing regions in the world, ensuring that each cup is unrivaled in flavor and freshness.
       </p>
-      <a href='#!' className={styles.btn}>Shop now</a>
+      <div className={ styles.btn }>
+        <CustomBtn to='/services' type='small' > Shop now </CustomBtn>
+      </div>
       <img src={offer_img} className={styles.img}></img>
     </motion.div>
   </section>
