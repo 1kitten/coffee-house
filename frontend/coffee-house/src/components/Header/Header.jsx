@@ -25,7 +25,7 @@ export const Header = memo(({ }) => {
     <CustomLink to='/' >Home</CustomLink>
     <CustomLink to='/menu' >Menu</CustomLink>
     <CustomLink to='/services' >Services</CustomLink>
-    <CustomLink to='/asd' >Product</CustomLink>
+    <CustomLink to='/menu' >Product</CustomLink>
     </nav>
   </header>
 )});
