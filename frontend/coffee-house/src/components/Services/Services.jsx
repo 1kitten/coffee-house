@@ -8,7 +8,7 @@ import { memo } from 'react'
 import { Link } from 'react-router-dom';
 
 export const Services = memo(({ }) => {
-
+  window.scroll(0, 0)
   const animation = {
     hidden: {
       opacity: 0,

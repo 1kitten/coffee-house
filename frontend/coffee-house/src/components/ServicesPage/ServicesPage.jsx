@@ -19,8 +19,9 @@ export const ServicesPage = ({ }) => {
 
   useEffect(() => {
     if (state) {
-      document.getElementById(state.category).click();
-      document.getElementById(state.category).click();
+      setTimeout(() => {
+        document.getElementById(state.category).click();
+      }, 0);
     }
   }, [])
 
