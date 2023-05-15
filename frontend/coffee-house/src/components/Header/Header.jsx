@@ -22,10 +22,8 @@ export const Header = memo(({ }) => {
       <img src={imageSrc} alt='Coffe house' />
     </a>
     <nav className={styles.nav} title='Main navigation'>
-    <CustomLink to='/' >Home</CustomLink>
-    <CustomLink to='/menu' >Menu</CustomLink>
-    <CustomLink to='/services' >Services</CustomLink>
-    <CustomLink to='/menu' >Product</CustomLink>
+      <CustomLink to='/' >Home</CustomLink>
+      <CustomLink to='/services' >Services</CustomLink>
     </nav>
   </header>
 )});

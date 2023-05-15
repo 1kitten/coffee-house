@@ -6,6 +6,8 @@ import coffee_4 from '../../assets/png/coffee_4.png'
 import pastry_1 from '../../assets/png/pastry_1.png'
 import pastry from '../../assets/png/pastry.png'
 
+import { Link } from 'react-router-dom'
+
 export const Item = ({ type }) => {
   let img
   let title
@@ -33,9 +35,11 @@ export const Item = ({ type }) => {
   }
   
   return(
-  <div className={styles.item}>
-    <img className={styles.img} src={img} />
-    <label  className={styles.title}>{title}</label>
-  </div>
+  <Link to={'/info'} state={{ img }}>
+    <div className={styles.item}>
+      <img className={styles.img} src={img} />
+      <label  className={styles.title}>{title}</label>
+    </div>
+  </Link>
   )
 };
