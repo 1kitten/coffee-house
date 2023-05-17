@@ -23,7 +23,7 @@ export const Item = ({ type }) => {
     case 'coffee':
       img = coffee_1
       title = 'Coffee'
-      scane = 'https://prod.spline.design/Dj2et5rdCMsWrGd4/scene.splinecode'
+      scane = 'https://prod.spline.design/F4x-qvtw6z9uSYOo/scene.splinecode'
       break
 
     case 'way':  
