@@ -26,7 +26,6 @@ export const ServicesPage = ({ }) => {
   }, [])
 
   const checkClick = (e) => {
-    console.log(e.target)
     if (e.target.dataset.action) {
       setCategory(e.target.dataset.action)
     }

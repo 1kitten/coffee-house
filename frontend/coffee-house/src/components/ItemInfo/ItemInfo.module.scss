@@ -10,6 +10,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 820px) {
+    height: auto;
+  }
 }
 
 .wrapper {
@@ -17,7 +21,7 @@
   height: 50%;
   background: rgba(173, 113, 74, 0.35);
   border-radius: 35px;
-  margin: 0;
+  margin: 65px 0;
   padding: 0px;
   display: flex;
   
@@ -27,7 +31,8 @@
 
   @media (max-width: 820px) {
     flex-direction: column;
-    height: max-content;
+    height: auto;
+    position: relative;
   }
 }
 
@@ -41,6 +46,7 @@
 
   @media (max-width: 820px) {
     width: 80%;
+    justify-content: flex-start;
   }
 }
 
