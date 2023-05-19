@@ -44,7 +44,7 @@ export const Services = memo(({ }) => {
     variants={animation} className={styles.title}>Services</motion.h1>
     <div className={styles.wrapper}>
       <div className={styles.items}>
-        <Link to={'/services'} state={{ category: 'coffee' }}>
+        <Link style={{'width': '100%'}} to={'/services'} state={{ category: 'coffee' }}>
           <motion.div variants={animationItems} custom={1} 
           whileHover={{ scale: 1.1}}   
           whileTap={{scale: 0.9}}
@@ -53,7 +53,7 @@ export const Services = memo(({ }) => {
             <label className={styles.description}>Type of coffee</label>
           </motion.div>
         </Link>
-        <Link to={'/services'} state={{ category: 'way' }}>
+        <Link style={{'width': '100%'}} to={'/services'} state={{ category: 'way' }}>
           <motion.div variants={animationItems} custom={2} 
           whileHover={{ scale: 1.1}}
           whileTap={{scale: 0.9}}
@@ -62,7 +62,7 @@ export const Services = memo(({ }) => {
             <label className={styles.description}>Take a way</label>
           </motion.div>
         </Link>
-        <Link to={'/services'} state={{ category: 'beans' }}>
+        <Link style={{'width': '100%'}} to={'/services'} state={{ category: 'beans' }}>
           <motion.div variants={animationItems} custom={3}
           whileHover={{ scale: 1.1}}
           whileTap={{scale: 0.9}} 
@@ -71,7 +71,7 @@ export const Services = memo(({ }) => {
             <label className={styles.description}>Beans variant</label>
           </motion.div>
         </Link>
-        <Link to={'/services'} state={{ category: 'pastry' }}>
+        <Link style={{'width': '100%'}} to={'/services'} state={{ category: 'pastry' }}>
           <motion.div variants={animationItems} custom={4}
             whileHover={{ scale: 1.1}}
             whileTap={{scale: 0.9}}
