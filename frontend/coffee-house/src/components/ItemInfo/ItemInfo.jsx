@@ -7,7 +7,6 @@ import { CustomBtn } from '../CustomBtn/CustomBtn'
 
 export const ItemInfo =({ }) => {
   const { state } = useLocation()
-  console.log( state.price)
   return(
   <div className={styles.itemInfo}>
     <div className={styles.wrapper}>
@@ -17,7 +16,7 @@ export const ItemInfo =({ }) => {
         <p className={styles.description}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia totam ipsa aspernatur ut laboriosam autem tenetur error est? Animi, libero dolores. Explicabo et illo laboriosam id nisi a aperiam sint?</p>
         <div className={styles.buy}>
           <label className={styles.price}>${state.price}</label>
-          <CustomBtn to='/services' type='buy' >Buy</CustomBtn>
+          <CustomBtn to='/' type='buy' >Buy</CustomBtn>
         </div>
       </div>
     </div>
