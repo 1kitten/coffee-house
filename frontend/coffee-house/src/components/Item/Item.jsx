@@ -9,49 +9,76 @@ import pastry from '../../assets/png/pastry.png'
 
 import { Link } from 'react-router-dom'
 
+let itemsArr
+
+let itemsCoffee = [
+  {
+    img: coffee_1,
+    title: 'Espresso',
+    scane:'https://prod.spline.design/hPTgc06xjbRfg350/scene.splinecode',
+    price: 20,
+  },
+  {
+    img: coffee_2,
+    title: 'Americano',
+    scane:'https://prod.spline.design/5nJW7IwJvU7Y07Zy/scene.splinecode',
+    price: 25,
+  },
+  {
+    img: coffee_3,
+    title: 'Cappuccino',
+    scane:'https://prod.spline.design/pc6odhdUpSVcke4G/scene.splinecode',
+    price: 25,
+  },
+]
+
 export const Item = ({ type }) => {
-  let img
-  let title
-  let scane
-  let price
-  
+
   switch(type) {
-    case 'pastry':  
-      img = pastry_1
-      title = 'Pastry'
-      scane = 'https://prod.spline.design/pc6odhdUpSVcke4G/scene.splinecode'
-      price = 20
+    case 'pastry':
+      itemsArr = [{
+        img: pastry_1,
+        title: 'Pastry',
+        scane: 'https://prod.spline.design/pc6odhdUpSVcke4G/scene.splinecode',
+        price: 20,
+      }]
       break
   
     case 'coffee':
-      img = coffee_1
-      title = 'Coffee'
-      scane = 'https://prod.spline.design/F4x-qvtw6z9uSYOo/scene.splinecode'
-      price = 5
+      itemsArr = itemsCoffee
       break
 
     case 'way':  
-      img = coffee_2
-      title = 'Way'
-      scane = 'https://prod.spline.design/qrnxCz0ymxQfNwgZ/scene.splinecode'
-      price = 15
+    itemsArr = [{
+      img: coffee_2,
+      title: 'Way',
+      scane:'https://prod.spline.design/5nJW7IwJvU7Y07Zy/scene.splinecode',
+      price: 15
+    }]
+     
       break
   
     case 'beans':
-      img = arabica
-      title = 'Beans'
-      scane = 'https://prod.spline.design/Dj2et5rdCMsWrGd4/scene.splinecode'
-      price = 10
+      itemsArr = [{
+        img: arabica,
+        title: 'Beans',
+        scane: 'https://prod.spline.design/Dj2et5rdCMsWrGd4/scene.splinecode',
+        price: 10
+      }]
       break
   }
   
   return(
-  <Link to={'/info'} state={{ scane, title, price }}>
-    <div className={styles.item}>
-      <img className={styles.img} src={img} />
-      <label className={styles.title}>{title}</label>
-      <label className={styles.price}>${price}</label>
-    </div>
-  </Link>
+    <>
+      {itemsArr.map((key)=>(
+        <Link to={'/info'} state={ {scane: key.scane, title: key.title, price: key.price} }>
+          <div key={key.title} className={styles.item}>
+            <img className={styles.img} src={key.img} />
+            <label className={styles.title}>{key.title}</label>
+            <label className={styles.price}>${key.price}</label>
+          </div>
+        </Link>
+      ))}
+    </>
   )
 };

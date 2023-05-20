@@ -7,6 +7,7 @@ import { CustomBtn } from '../CustomBtn/CustomBtn'
 
 export const ItemInfo =({ }) => {
   const { state } = useLocation()
+  console.log(state)
   return(
   <div className={styles.itemInfo}>
     <div className={styles.wrapper}>
