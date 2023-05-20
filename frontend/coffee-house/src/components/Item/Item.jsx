@@ -50,7 +50,7 @@ export const Item = ({ type }) => {
 
     case 'way':  
     itemsArr = [{
-      img: coffee_2,
+      img: coffee_3,
       title: 'Way',
       scane:'https://prod.spline.design/5nJW7IwJvU7Y07Zy/scene.splinecode',
       price: 15
