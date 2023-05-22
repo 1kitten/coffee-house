@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 
 export const ServicesPage = ({ }) => {
   const { state } = useLocation()
+  console.log(state)
   let radius = window.innerWidth
   const [category, setCategory] = useState(state?.category ? state.category : 'coffee')
 
