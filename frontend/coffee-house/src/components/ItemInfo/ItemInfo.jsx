@@ -1,16 +1,18 @@
 import styles from './ItemInfo.module.scss';
 import { useEffect, memo, Suspense  } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { SplineItem } from '../SplineItem/SplineItem'
 import { CustomBtn } from '../CustomBtn/CustomBtn'
-
+import exit from '../../assets/exit.svg'
 
 export const ItemInfo =({ }) => {
   const { state } = useLocation()
-  console.log(state)
+  const navigate = useNavigate()
+  const goBack = () => navigate(-1)
   return(
   <div className={styles.itemInfo}>
     <div className={styles.wrapper}>
+      <img className={styles.exit} src={exit} onClick={goBack} alt={'go back'}/>
       <SplineItem scane={state.scane}/>
       <div className={styles.item}>
         <h2 className={styles.title}>{state.title}</h2>

@@ -12,7 +12,6 @@ import arabica from '../../assets/png/arabica.png'
 import robusta from '../../assets/png/robusta.png'
 import house_blend from '../../assets/png/house_blend.png'
 
-
 import { Link } from 'react-router-dom'
 
 let itemsArr
@@ -22,19 +21,19 @@ let itemsWay = [
     img: way_1,
     title: 'Espresso',
     scane: 'https://prod.spline.design/eukNsE3y7kC21cy1/scene.splinecode',
-    price: 20,
+    price: 11,
   },
   {
     img: way_2,
     title: 'Americano',
     scane: 'https://prod.spline.design/S2PXRRcrUvISGTdJ/scene.splinecode',
-    price: 25,
+    price: 20,
   },
   {
     img: way_3,
     title: 'Cappuccino',
     scane: 'https://prod.spline.design/hPTgc06xjbRfg350/scene.splinecode',
-    price: 25,
+    price: 6,
   },
 ]
 
@@ -43,19 +42,19 @@ let itemsPastry = [
     img: pastry_1,
     title: 'Honey cake',
     scane: 'https://prod.spline.design/pc6odhdUpSVcke4G/scene.splinecode',
-    price: 15,
+    price: 11,
   },
   {
     img: pastry_2,
     title: 'Strawberry paradise',
     scane: 'https://prod.spline.design/X-krRXjUOp1i-GqA/scene.splinecode',
-    price: 25,
+    price: 22,
   },
   {
     img: pastry_3,
     title: 'Donut',
     scane: 'https://prod.spline.design/RxLbBEYUFglt1ans/scene.splinecode',
-    price: 10,
+    price: 14,
   },
 ]
 
@@ -64,19 +63,19 @@ let itemsCoffee = [
     img: coffee_1,
     title: 'Espresso',
     scane: 'https://prod.spline.design/I62Y1blxIWecXlcB/scene.splinecode',
-    price: 15,
+    price: 10,
   },
   {
     img: coffee_2,
     title: 'Americano',
     scane: 'https://prod.spline.design/dX-IX4BgRge3HGQ7/scene.splinecode',
-    price: 25,
+    price: 19,
   },
   {
     img: coffee_3,
     title: 'Cappuccino',
     scane: 'https://prod.spline.design/A9FnezQq1KX50de6/scene.splinecode',
-    price: 10,
+    price: 13,
   },
 ]
 
@@ -85,19 +84,19 @@ let itemsBeans = [
     img: arabica,
     title: 'Arabica',
     scane: 'https://prod.spline.design/6RgGn0ITE-fAvs4M/scene.splinecode',
-    price: 15,
+    price: 16,
   },
   {
     img: robusta,
-    title: 'Americano',
+    title: 'Robusta',
     scane: 'https://prod.spline.design/8Ob9c7KAwo1BPl2w/scene.splinecode',
-    price: 25,
+    price: 27,
   },
   {
     img: house_blend,
-    title: 'Cappuccino',
+    title: 'House blend',
     scane: 'https://prod.spline.design/cCdytxrP6p2KIHaQ/scene.splinecode',
-    price: 10,
+    price: 12,
   },
 ]
 

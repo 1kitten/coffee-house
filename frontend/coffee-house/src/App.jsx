@@ -2,8 +2,6 @@ import './App.scss';
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import { Hero } from './components/Hero/Hero'
-
 import { HeroPage } from './components/HeroPage/HeroPage';
 import { ServicesPage } from './components/ServicesPage/ServicesPage'
 import { Layout } from './components/Layout/Layout';
