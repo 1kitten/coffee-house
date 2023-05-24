@@ -21,6 +21,7 @@
 }
 
 .content {
+  position: relative;
   padding: 20px;
   border-radius: 35px;
   width: 80%;
@@ -73,6 +74,13 @@ overflow: visible;
   padding: 0 10px;
  }
 } 
+
+.exit {
+  position: absolute;
+  left: 70px;
+  top: 30px;
+  z-index: 2;
+}
 
 .img {
   @extend .img;
