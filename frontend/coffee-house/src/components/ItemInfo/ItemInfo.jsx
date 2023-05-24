@@ -1,5 +1,4 @@
 import styles from './ItemInfo.module.scss';
-import { useState, useEffect, memo, Suspense  } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { SplineItem } from '../SplineItem/SplineItem'
 import { CustomBtn } from '../CustomBtn/CustomBtn'
