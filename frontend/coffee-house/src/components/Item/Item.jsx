@@ -12,6 +12,8 @@ import arabica from '../../assets/png/arabica.png'
 import robusta from '../../assets/png/robusta.png'
 import house_blend from '../../assets/png/house_blend.png'
 
+import { motion } from 'framer-motion'
+
 import { Link } from 'react-router-dom'
 
 let itemsArr
@@ -126,11 +128,11 @@ export const Item = ({ type }) => {
     <>
       {itemsArr.map((key)=>(
         <Link to={'/info'} state={ {scane: key.scane, title: key.title, price: key.price} }>
-          <div key={key.title} className={styles.item}>
+          <motion.div key={key.title} className={styles.item} whileHover={{ scale: 1.1}} whileTap={{scale: 0.9}}>
             <img className={styles.img} src={key.img} />
             <label className={styles.title}>{key.title}</label>
             <label className={styles.price}>${key.price}</label>
-          </div>
+          </motion.div>
         </Link>
       ))}
     </>
