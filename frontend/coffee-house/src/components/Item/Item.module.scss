@@ -12,11 +12,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: space-evenly;
+
+  @media (max-width: 820px) {
+    height: 370px;
+  }
 }
 
 .img {
   object-fit: contain;
   height: 380px;
+
+  @media (max-width: 820px) {
+    height: 280px;
+  }
 }
 
 .title {

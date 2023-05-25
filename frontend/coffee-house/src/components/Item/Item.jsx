@@ -2,56 +2,137 @@ import styles from './Item.module.scss';
 import coffee_1 from '../../assets/png/coffee_1.png'
 import coffee_2 from '../../assets/png/coffee_2.png'
 import coffee_3 from '../../assets/png/coffee_3.png'
-import coffee_4 from '../../assets/png/coffee_4.png'
+import way_1 from '../../assets/png/way_1.png'
+import way_2 from '../../assets/png/way_2.png'
+import way_3 from '../../assets/png/way_3.png'
 import pastry_1 from '../../assets/png/pastry_1.png'
+import pastry_2 from '../../assets/png/pastry_2.png'
+import pastry_3 from '../../assets/png/pastry_3.png'
 import arabica from '../../assets/png/arabica.png'
-import pastry from '../../assets/png/pastry.png'
+import robusta from '../../assets/png/robusta.png'
+import house_blend from '../../assets/png/house_blend.png'
 
 import { Link } from 'react-router-dom'
 
+let itemsArr
+
+let itemsWay = [
+  {
+    img: way_1,
+    title: 'Espresso',
+    scane: 'https://prod.spline.design/eukNsE3y7kC21cy1/scene.splinecode',
+    price: 11,
+  },
+  {
+    img: way_2,
+    title: 'Americano',
+    scane: 'https://prod.spline.design/S2PXRRcrUvISGTdJ/scene.splinecode',
+    price: 20,
+  },
+  {
+    img: way_3,
+    title: 'Cappuccino',
+    scane: 'https://prod.spline.design/hPTgc06xjbRfg350/scene.splinecode',
+    price: 6,
+  },
+]
+
+let itemsPastry = [
+  {
+    img: pastry_1,
+    title: 'Honey cake',
+    scane: 'https://prod.spline.design/pc6odhdUpSVcke4G/scene.splinecode',
+    price: 11,
+  },
+  {
+    img: pastry_2,
+    title: 'Strawberry paradise',
+    scane: 'https://prod.spline.design/X-krRXjUOp1i-GqA/scene.splinecode',
+    price: 22,
+  },
+  {
+    img: pastry_3,
+    title: 'Donut',
+    scane: 'https://prod.spline.design/RxLbBEYUFglt1ans/scene.splinecode',
+    price: 14,
+  },
+]
+
+let itemsCoffee = [
+  {
+    img: coffee_1,
+    title: 'Espresso',
+    scane: 'https://prod.spline.design/I62Y1blxIWecXlcB/scene.splinecode',
+    price: 10,
+  },
+  {
+    img: coffee_2,
+    title: 'Americano',
+    scane: 'https://prod.spline.design/dX-IX4BgRge3HGQ7/scene.splinecode',
+    price: 19,
+  },
+  {
+    img: coffee_3,
+    title: 'Cappuccino',
+    scane: 'https://prod.spline.design/A9FnezQq1KX50de6/scene.splinecode',
+    price: 13,
+  },
+]
+
+let itemsBeans = [
+  {
+    img: arabica,
+    title: 'Arabica',
+    scane: 'https://prod.spline.design/6RgGn0ITE-fAvs4M/scene.splinecode',
+    price: 16,
+  },
+  {
+    img: robusta,
+    title: 'Robusta',
+    scane: 'https://prod.spline.design/8Ob9c7KAwo1BPl2w/scene.splinecode',
+    price: 27,
+  },
+  {
+    img: house_blend,
+    title: 'House blend',
+    scane: 'https://prod.spline.design/cCdytxrP6p2KIHaQ/scene.splinecode',
+    price: 12,
+  },
+]
+
+
+
 export const Item = ({ type }) => {
-  let img
-  let title
-  let scane
-  let price
-  
+
   switch(type) {
-    case 'pastry':  
-      img = pastry_1
-      title = 'Pastry'
-      scane = 'https://prod.spline.design/pc6odhdUpSVcke4G/scene.splinecode'
-      price = 20
+    case 'pastry':
+      itemsArr = itemsPastry
       break
   
     case 'coffee':
-      img = coffee_1
-      title = 'Coffee'
-      scane = 'https://prod.spline.design/F4x-qvtw6z9uSYOo/scene.splinecode'
-      price = 5
+      itemsArr = itemsCoffee
       break
 
     case 'way':  
-      img = coffee_2
-      title = 'Way'
-      scane = 'https://prod.spline.design/qrnxCz0ymxQfNwgZ/scene.splinecode'
-      price = 15
+      itemsArr = itemsWay
       break
   
     case 'beans':
-      img = arabica
-      title = 'Beans'
-      scane = 'https://prod.spline.design/Dj2et5rdCMsWrGd4/scene.splinecode'
-      price = 10
+      itemsArr = itemsBeans
       break
   }
   
   return(
-  <Link to={'/info'} state={{ scane, title, price }}>
-    <div className={styles.item}>
-      <img className={styles.img} src={img} />
-      <label className={styles.title}>{title}</label>
-      <label className={styles.price}>${price}</label>
-    </div>
-  </Link>
+    <>
+      {itemsArr.map((key)=>(
+        <Link to={'/info'} state={ {scane: key.scane, title: key.title, price: key.price} }>
+          <div key={key.title} className={styles.item}>
+            <img className={styles.img} src={key.img} />
+            <label className={styles.title}>{key.title}</label>
+            <label className={styles.price}>${key.price}</label>
+          </div>
+        </Link>
+      ))}
+    </>
   )
 };
