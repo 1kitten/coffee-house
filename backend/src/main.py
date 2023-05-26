@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from database import session
 
-from src.reserve.schemas import ReserveSchema
 
 app = FastAPI(
     title='coffee-shop'
@@ -18,7 +18,6 @@ app.add_middleware(
 )
 
 
-@app.post('/api/v1/table_reservation/', response_model=ReserveSchema)
-def reserve_table(reserve_data: ReserveSchema) -> ReserveSchema:
-    """ Endpoint to reserve table. """
-    return reserve_data
+@app.get('/api/v1/items/{category}')
+def get_item_by_category(category: str):
+    ...
