@@ -14,7 +14,7 @@
 
 ✔️ **Back skills**
 
-![skills](https://skillicons.dev/icons?i=py,fastapi,postgres)
+![skills](https://skillicons.dev/icons?i=py,fastapi,sqlite)
 
 
 ### 💅 Design
