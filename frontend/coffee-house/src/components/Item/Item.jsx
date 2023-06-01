@@ -102,8 +102,6 @@ let itemsBeans = [
   },
 ]
 
-
-
 export const Item = ({ type }) => {
 
   switch(type) {
